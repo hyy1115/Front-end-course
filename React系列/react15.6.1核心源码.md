@@ -8,7 +8,7 @@ const React = {
     forEach: ReactChildren.forEach,
     count: ReactChildren.count,
     toArray: ReactChildren.toArray,
-    only: onlyChild //React.Children.only(this.props.children)
+    only: onlyChild React系列
   },
 
   Component: ReactBaseClasses.Component, //最基础的react组件基类
@@ -23,7 +23,7 @@ const React = {
   createFactory, //推荐使用createElement替代它
   createMixin, //被遗弃，使用https://fb.me/createmixin-was-never-implemented for more info替代
 
-  DOM: ReactDOMFactories, //提供了各种DOM元素的创建，例如：React.DOM.svg()
+  DOM: ReactDOMFactories, React系列
 
   version: ReactVersion, //一个查看react版本号的东东
 
