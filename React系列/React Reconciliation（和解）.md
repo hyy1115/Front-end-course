@@ -76,7 +76,7 @@ React提供了一个声明性的API，以便您不必担心每个更新的确切
 
 例如，在子元素的末尾添加元素时，在这两棵树之间转换效果很好：
 
-```javascript
+```html
 <ul>
   <li>first</li>
   <li>second</li>
@@ -89,11 +89,11 @@ React提供了一个声明性的API，以便您不必担心每个更新的确切
 </ul>
 ```
 
-React将匹配两个<li>first</li>树，匹配两个<li>second</li>树，然后插入<li>third</li>树。 
+React将匹配两个`<li>first</li>`树，匹配两个`<li>second</li>`树，然后插入`<li>third</li>`树。 
 
 如果你天真地实现它，开始插入一个元素的性能会更差。例如，这两棵树之间的转换效果不佳：
 
-```javascript
+```html
 <ul>
   <li>Duke</li>
   <li>Villanova</li>
@@ -106,13 +106,13 @@ React将匹配两个<li>first</li>树，匹配两个<li>second</li>树，然后�
 </ul>
 ```
 
-react会改变每个child，而不是意识到它可以保持<li>Duke</li>和<li>Villanova</li>子树完整。这种低效率可能是一个问题。
+react会改变每个child，而不是意识到它可以保持`<li>Duke</li>`和`<li>Villanova</li>`子树完整。这种低效率可能是一个问题。
 
 #### Keys
 
 为了解决这个问题，React支持一个key属性。当children有keys的时候，React使用key来匹配原始树中的children和新树中的children。例如，为我们上面的低效率示例添加一个key可以使树转换高效：
 
-```javascript
+```html
 <ul>
   <li key="2015">Duke</li>
   <li key="2016">Villanova</li>
@@ -129,7 +129,7 @@ react会改变每个child，而不是意识到它可以保持<li>Duke</li>和<li
 
 在实践中，找到一个key通常不难。您要显示的元素可能已经有一个唯一的ID，所以key可以来自您的数据：
 
-```javascript
+```html
 <li key={item.id}>{item.name}</li>
 ```
 
