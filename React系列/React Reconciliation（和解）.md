@@ -22,11 +22,11 @@ React提供了一个声明性的API，以便您不必担心每个更新的确切
 
 #### 不同类型的元素
 
-每当根元素具有不同的类型时，React将会拆除旧的树并从头开始构建新的树。从<a>到<img>，或从<Article>到<Comment>，或从<Button>到<div> - 任何这些都将导致完全重建。
+每当根元素具有不同的类型时，React将会拆除旧的树并从头开始构建新的树。从`<a>`到`<img>`，或从`<Article>`到`<Comment>`，或从`<Button>`到`<div>` - 任何这些都将导致完全重建。
 
 当拆除树时，旧的DOM节点被破坏。组件实例接收componentWillUnmount（）。在构建新树时，将新的DOM节点插入到DOM中。组件实例接收componentWillMount（），然后接收componentDidMount（）。任何与旧树相关的状态都将丢失。
 
-根目录下的任何组件也将被卸载，并将其状态销毁。例如，当差异：
+根目录下的任何组件也将被卸载，并将其状态销毁。例如，当差异:
 
 ```javascript
 <div>
