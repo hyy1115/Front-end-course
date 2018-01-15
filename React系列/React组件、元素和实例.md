@@ -48,6 +48,7 @@ class Form extends TraditionalObjectOrientedView {
 那么，React与众不同呢？
 
 <hr />
+
 ### 元素描述树
 在React中，这是元素来拯救的地方。元素是一个普通的对象，描述组件实例或DOM节点及其所需的属性。它仅包含有关组件类型（例如Button），其属性（例如其颜色）以及其中的任何子元素的信息。
 
